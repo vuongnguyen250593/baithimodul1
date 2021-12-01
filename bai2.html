@@ -10,19 +10,21 @@
 <script>
     let arr = [1,7,4,3,8,9,3,6];
     let num = parseInt(prompt("Nhập vào 1 số nguyên bất kì"));
-    let check = false;
-
     // Hàm trả về vị trí cần tìm
     function findIndex(arr,num) {
         for (let i = 0; i < arr.length; i++) {
             if (arr[i] === num) {
                 return i;
+            } else {
+                return ("Số vừa nhập ko nằm trong mảng");
             }
         }
     }
     document.write(findIndex(arr,num));
+    document.write("<br>")
  
     // Kiểm tra giá trị số nguyên bất kì
+    let check = false;
     function findValue(arr,num) {
         for (let i = 0; i < arr.length; i ++) {
             if (arr[i] === num) {
