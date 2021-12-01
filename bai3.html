@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function timSoNguyenAm(string) {
+        let dayNguyenAm = ["u", "e", "o", "a", "i"];
+        let count = 0;
+        for (let i = 0; i < string.length; i++) {
+            for (let j = 0; j < dayNguyenAm.length; j++) {
+                if (string[i].toLowerCase() === dayNguyenAm[j]) {
+                    count++;
+                }
+            }
+        }
+        if (count === 0) {
+            return false;
+        } else {
+            return count;
+        }
+    } 
+    let daychu = "Codegym";
+    document.write(timSoNguyenAm(daychu));
+</script>
+</body>
+</html>
